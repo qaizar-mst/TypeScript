@@ -54,3 +54,23 @@ interface CupSize { size : "small" | "large";}
 class Chai implements CupSize{
     size: "small" | "large" = "large";
 }
+
+
+
+
+
+// merging in interfaces:
+
+interface User {
+    name: string
+}
+
+interface User {
+    age: number
+}
+
+const u : User = {
+    name : "qaizar",
+    age : 21
+}
+// here age is a required property that needs to be passed, else interface wont work without it.
