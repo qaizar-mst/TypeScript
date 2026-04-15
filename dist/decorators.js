@@ -16,4 +16,21 @@ class User {
     }
 }
 const u = new User();
+// decorator factory, is a concept where you create a new function and return the decorator,
+// so that we can pass arguments to the function, example: 
+function LoggerDecorator() {
+    function Logger1(target) {
+        console.log(`Logging...`);
+    }
+    return Logger1;
+}
+@LoggerDecorator()
+class User1 {
+    name = "John";
+    age = 21;
+    constructor() {
+        console.log(`Constructor Called..`);
+    }
+}
+const u1 = new User();
 //# sourceMappingURL=decorators.js.map
