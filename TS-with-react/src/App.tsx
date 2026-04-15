@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { Counter } from './components/Counter'
+import OrderForm from './components/OrderForm'
 
 function App() {
   return (
@@ -10,6 +11,13 @@ function App() {
     </div>
     <div>
       <Counter/>
+    </div>
+    <div>
+      <OrderForm
+        onSubmit = {(order) => {
+          console.log("Placed:", order.name, order.cups)
+        }}
+      />
     </div>
     </>
   )
